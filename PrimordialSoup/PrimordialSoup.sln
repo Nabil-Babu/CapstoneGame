@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{DBD5F224-5363-F0F6-7D38-CD69E4608252}") = "PrimordialSoup", "Assembly-CSharp.csproj", "{270CEE67-6963-FD66-3C7C-9935F68076D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270CEE67-6963-FD66-3C7C-9935F68076D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{270CEE67-6963-FD66-3C7C-9935F68076D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{270CEE67-6963-FD66-3C7C-9935F68076D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{270CEE67-6963-FD66-3C7C-9935F68076D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
