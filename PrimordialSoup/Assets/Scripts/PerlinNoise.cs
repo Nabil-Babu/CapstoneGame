@@ -13,7 +13,7 @@ public class PerlinNoise{
 	}
 
 	private int random(long x, long y, int range){
-		return random (x + y * 65535, range); 
+		return random (x + y * 65536, range); 
 	}
 
 	public int getNoise(int x, int y, int range){
