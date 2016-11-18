@@ -2,22 +2,24 @@
 using System.Collections;
 
 public class PerlinNoise{
-	long seed; 
+	int seed; 
 
-	public PerlinNoise (long seed){
+	public PerlinNoise (int seed){
 		this.seed = seed; 
 	}
 
-	private int random(long x, int range){
-		return (int)((x+seed)^5) % range;
+	private int random(int x, int range){
+		Random.InitState (seed+x);
+		return Random.Range (0, range);
+		//return (int)((x+seed)^5) %  range;
 	}
 
-	private int random(long x, long y, int range){
+	private int random(int x, int y, int range){
 		return random (x + y * 65536, range); 
 	}
 
 	public int getNoise(int x, int y, int range){
-		int chunkSize = 8;
+		int chunkSize = 16;
 
 		float noise = 0; 
 

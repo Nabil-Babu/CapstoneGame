@@ -25,8 +25,8 @@ public class Generator : MonoBehaviour {
 		for (int i = 0; i < maxX; i++) {
 			 
 			for (int j = 0; j < maxY; j++) {
-				//Debug.Log ("x index, y index "+xCount+" "+yCount);
-				int zz = noise.getNoise (i, j, 100); 
+				int zz = noise.getNoise (i, j, 100);
+				//Debug.Log ("x, y, zz "+i+" "+j+" "+zz);
 				GameObject block = (GameObject) Instantiate (tilePrefab, new Vector2(i + width, j + height), tilePrefab.transform.rotation);
 				if (zz < waterLevel) {
 					float shade = 0;
