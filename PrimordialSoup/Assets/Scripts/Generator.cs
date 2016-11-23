@@ -4,6 +4,7 @@ using System.Collections;
 public class Generator : MonoBehaviour {
 
 	public GameObject tilePrefab;
+	public GameObject playerPrefab;
 
 	public int maxX;
 	public int maxY; 
@@ -19,6 +20,7 @@ public class Generator : MonoBehaviour {
 		tileGrid = new GameObject[maxX,maxY];
 		noise = new PerlinNoise (Random.Range(1000000, 10000000));
 		Regenerate();
+		spawnPlayer ();
 	}
 
 	private void Regenerate() {
@@ -43,6 +45,7 @@ public class Generator : MonoBehaviour {
 	}
 
 	private void spawnPlayer() {
+
 		float xPos = 0;
 		float yPos = 0;
 
@@ -50,6 +53,8 @@ public class Generator : MonoBehaviour {
 		yPos = (tileGrid [maxX - 1, maxY - 1].transform.position.y - tileGrid [0, 0].transform.position.y) / 2;
 
 		playerSpawn = new Vector2 (xPos, yPos);
+
+		Instantiate (playerPrefab, playerSpawn, playerPrefab.transform.rotation);
 
 
 	}
