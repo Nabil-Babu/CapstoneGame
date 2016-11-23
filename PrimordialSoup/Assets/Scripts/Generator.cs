@@ -5,14 +5,18 @@ public class Generator : MonoBehaviour {
 
 	public GameObject tilePrefab;
 
-	public int maxX = 11;
-	public int maxY = 10; 
-	public int waterLevel = 50; 
+	public int maxX;
+	public int maxY; 
+	public int waterLevel;
+	public GameObject[,] tileGrid;
+
+	private Vector2 playerSpawn;
 
 	PerlinNoise noise;
 
 	// Use this for initialization
 	void Start () {
+		tileGrid = new GameObject[maxX,maxY];
 		noise = new PerlinNoise (Random.Range(1000000, 10000000));
 		Regenerate();
 	}
@@ -26,19 +30,27 @@ public class Generator : MonoBehaviour {
 			 
 			for (int j = 0; j < maxY; j++) {
 				int zz = noise.getNoise (i, j, 100);
-				//Debug.Log ("x, y, zz "+i+" "+j+" "+zz);
 				GameObject block = (GameObject) Instantiate (tilePrefab, new Vector2(i + width, j + height), tilePrefab.transform.rotation);
-				if (zz < waterLevel) {
-					float shade = 0;
-					shade = ((float) zz / (float) waterLevel);
-					block.GetComponent<TileChanger>().Color (0, 0, shade);	
+				tileGrid [i, j] = block;
+				if (zz >= waterLevel) {
+					block.GetComponent<TileChanger>().Color (0, 255, 0);	
 				} else {
-					float shade = 0;
-					shade = (((float) zz - (float)waterLevel)/ (float) waterLevel);
-					block.GetComponent<TileChanger>().Color (0, shade, 0);	
+					block.GetComponent<TileChanger>().Color (0, 0, 255);
 				} 
 			}
 			 
 		}
+	}
+
+	private void spawnPlayer() {
+		float xPos = 0;
+		float yPos = 0;
+
+		xPos = (tileGrid [maxX - 1, maxY - 1].transform.position.x - tileGrid [0, 0].transform.position.x) / 2;
+		yPos = (tileGrid [maxX - 1, maxY - 1].transform.position.y - tileGrid [0, 0].transform.position.y) / 2;
+
+		playerSpawn = new Vector2 (xPos, yPos);
+
+
 	}
 }
