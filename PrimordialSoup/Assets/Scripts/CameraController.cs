@@ -3,8 +3,7 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-	public GameObject player;
-	private Vector2 offset;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +12,28 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -1); 
+
+
+		if (player == null) {
+			// find player ship
+			GameObject go = GameObject.FindGameObjectWithTag("Player");
+			if (go != null) {
+				player = go; 
+			}
+		}
+
+		if (player == null) {
+			return; // Try Again
+		}
+
+
+		if (player != null) {
+			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -1); 
+		}
+
+
+
+	
+	
 	}
 }

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 8335862609899154ea614903c9b0cc17
-timeCreated: 1476492951
+timeCreated: 1479956168
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - greenTile: {instanceID: 0}
+  - blueTile: {fileID: 1000013460568170, guid: 56d01b3cd206b63459644e91625d5c0d, type: 2}
+  - playerPrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

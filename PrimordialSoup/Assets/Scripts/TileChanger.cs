@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TileChanger : MonoBehaviour {
 
-	private Color tileColor;
+	public Color tileColor;
 	private MeshRenderer rend; 
 
 	void Start () {
