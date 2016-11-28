@@ -34,7 +34,6 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage (int amount){
-		Debug.Log ("damage taken");
 		damaged = true;
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;

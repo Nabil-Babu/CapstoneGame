@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		target = GameObject.FindWithTag ("Player").transform;
 	}
 	
 	// Update is called once per frame
