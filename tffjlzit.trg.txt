@@ -1,0 +1,60 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#	modified:   Movement Prototype/Library/AssetServerCacheV3
+#	modified:   Movement Prototype/Library/ScriptAssemblies/Assembly-CSharp.dll
+#	modified:   Movement Prototype/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	modified:   Movement Prototype/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+#	modified:   Movement Prototype/Library/ScriptMapper
+#	modified:   Movement Prototype/Library/assetDatabase3
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000002000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000003000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000004000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000004100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000005000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000005100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000006000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000006100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000007000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000007100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000008000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000008100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/00000000000000009000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/0000000000000000a000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/0000000000000000a100000000000000
+#	modified:   Movement Prototype/Library/metadata/00/0000000000000000b000000000000000
+#	modified:   Movement Prototype/Library/metadata/00/0000000000000000c000000000000000
+#	modified:   Movement Prototype/Library/metadata/3c/3c0ad459c1534645b5d603b7cc258f97
+#	modified:   Movement Prototype/Library/metadata/41/4116772522ff19341a9df704d892a041
+#	modified:   Movement Prototype/Library/metadata/41/41ea7506048457047bded25f3cf504d2
+#	modified:   Movement Prototype/Library/metadata/58/58f7642f4e40b6a47a5ab947b53485bc
+#	modified:   Movement Prototype/Library/metadata/58/58f7642f4e40b6a47a5ab947b53485bc.info
+#	modified:   Movement Prototype/Library/metadata/5f/5f32cd94baa94578a686d4b9d6b660f7
+#	modified:   Movement Prototype/Library/metadata/73/739bbd9f364b4268874f9fd86ab3beef
+#	modified:   Movement Prototype/Library/metadata/77/77b493316a43e5e43842d6fac7c4c7c3
+#	modified:   Movement Prototype/Library/metadata/77/77b493316a43e5e43842d6fac7c4c7c3.info
+#	modified:   Movement Prototype/Library/metadata/7c/7cbab2be89b54486bbd23a6fe637d30e
+#	modified:   Movement Prototype/Library/metadata/80/80a3616ca19596e4da0f10f14d241e9f
+#	modified:   Movement Prototype/Library/metadata/85/852e56802eb941638acbb491814497b0
+#	modified:   Movement Prototype/Library/metadata/87/870353891bb340e2b2a9c8707e7419ba
+#	modified:   Movement Prototype/Library/metadata/8e/8e0cd8ed44d4412cbe0642067abc9e44
+#	modified:   Movement Prototype/Library/metadata/97/97decbdab0634cdd991f8d23ddf0dead
+#	modified:   Movement Prototype/Library/metadata/a0/a07e9858f6806e4478a413f8a66a451c
+#	modified:   Movement Prototype/Library/metadata/a5/a5acaabb1d8a91a4d9fa4bd7ebf40fb8
+#	modified:   Movement Prototype/Library/metadata/ad/adebbd281f1a4ef3a30be7f21937e02f
+#	modified:   Movement Prototype/Library/metadata/b5/b5e3c1f8d2952aa46a2e5e7759cb7978
+#	modified:   Movement Prototype/Library/metadata/da/da81d83a11c919e4598ecb325284d76e
+#	modified:   Movement Prototype/Library/metadata/f5/f5f67c52d1564df4a8936ccd202a3bd8
+#	modified:   Movement Prototype/Library/metadata/f6/f6069a47b06d9db4c9624f5377486c37
+#	modified:   Movement Prototype/Library/metadata/fa/fa22b557ba2700c4a8be76f064b373d5
+#	modified:   Movement Prototype/Library/metadata/fb/fb1d328713eca624897d5415ceea0bde
+#
+# Untracked files:
+#	Movement Prototype/Temp/
+#
+
