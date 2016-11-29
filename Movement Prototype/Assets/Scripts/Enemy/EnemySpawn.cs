@@ -37,8 +37,8 @@ public class EnemySpawn : MonoBehaviour {
 		Vector3 position = new Vector3 (Random.Range (-15.0f, 15.0f), Random.Range (-17.0f, 17.0f), 0);  
 		EnemyHealth enemyHealth = enemy.GetComponent <EnemyHealth> ();
 		EnemyMovement enemyMovement = enemy.GetComponent <EnemyMovement> ();
-		enemyHealth.startingHealth += 100;
-		enemyMovement.targetDistance += 5;
+//		enemyHealth.startingHealth += 100;
+//		enemyMovement.targetDistance += 5;
 		Instantiate (enemy, position, Quaternion.identity);
 		enemyAlive = true;
 		Debug.Log ("Enemy Health: " + enemyHealth.currentHealth);

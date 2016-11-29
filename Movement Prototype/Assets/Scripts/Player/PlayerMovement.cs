@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
@@ -8,23 +9,35 @@ public class PlayerMovement : MonoBehaviour {
 	public float rotHSpeed = 2.0F;
 	public float rotVSpeed = 2.0F;
 
+	PlayerScore playerScore;
+
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		playerScore = GetComponent<PlayerScore> ();
+
 	}
 
 	void FixedUpdate () {
 		float moveH = Input.GetAxis ("Horizontal");
 		float moveV = Input.GetAxis ("Vertical");
 
-		float h = rotHSpeed * Input.mousePosition.x;
-		float v = rotHSpeed * Input.mousePosition.y;
+		var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-		float angle = Mathf.Atan2(h, v) * Mathf.Rad2Deg * (-1);
+		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
 
-		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		transform.rotation = rot;
+		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z);
+		rb2d.angularVelocity = 0;
 
 		Vector2 movement = new Vector2 (moveH, moveV);
 		rb2d.AddForce (movement * speed);
 
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.gameObject.CompareTag ("PickUp")) {
+			other.gameObject.SetActive (false);
+			playerScore.CollectUpdate();
+		}
 	}
 }
