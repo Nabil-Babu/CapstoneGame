@@ -8,27 +8,27 @@ public class Generator : MonoBehaviour {
 	public GameObject redTile;
 	public GameObject yellowTile;
 	public GameObject playerPrefab;
+	public GameObject enemyPrefab;
+	public GameObject[,] tileGrid; 
 
 	public int maxX;
 	public int maxY; 
 	public int waterLevel;
+	public int greenMax;
+	public int redMax;
+
+
 	public List<GameObject> blues;
 	public List<GameObject> greens; 
-	public GameObject[,] tileGrid; 
-
 	private Vector2 centerPoint;
 	private Vector2 playerSpawn;
+	private Vector2 enemySpawn;
 
-	private int greenMax = 0;
-	private int redMax = 0;
+
 	PerlinNoise noise;
 
 	// Use this for initialization
 	void Start () {
-		//greenMax = waterLevel + (100 - waterLevel) / 2;
-		//redMax = greenMax + (100 - greenMax) / 2;
-		greenMax = 60;
-		redMax = 72;
 		tileGrid = new GameObject[maxX,maxY];
 		noise = new PerlinNoise (Random.Range(1000000, 10000000));
 		Regenerate();
@@ -44,7 +44,6 @@ public class Generator : MonoBehaviour {
 			 
 			for (int j = 0; j < maxY; j++) {
 				int zz = noise.getNoise (i, j, 100);
-				//Debug.Log (zz);
 				if (zz >= waterLevel && zz < greenMax) {
 					GameObject block = (GameObject)Instantiate (greenTile, new Vector2 (i + width, j + height), greenTile.transform.rotation);
 					tileGrid [i, j] = block;
@@ -89,10 +88,12 @@ public class Generator : MonoBehaviour {
 				if (cDist == 0) {
 					cDist = d;
 					playerSpawn = new Vector2(blues[i].transform.position.x,blues[i].transform.position.y);
+
 				} else {
 					if (d < cDist) {
 						cDist = d;
 						playerSpawn = new Vector2(blues[i].transform.position.x,blues[i].transform.position.y);
+
 					}
 				}
 			}
@@ -101,7 +102,6 @@ public class Generator : MonoBehaviour {
 
 
 		Instantiate (playerPrefab, playerSpawn, playerPrefab.transform.rotation);
-
 
 	}
 }
