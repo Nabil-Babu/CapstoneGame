@@ -4,7 +4,9 @@ using System.Collections.Generic;
 public class Generator : MonoBehaviour {
 
 	public GameObject greenTile;
-	public GameObject blueTile; 
+	public GameObject blueTile;
+	public GameObject redTile;
+	public GameObject yellowTile;
 	public GameObject playerPrefab;
 
 	public int maxX;
@@ -17,10 +19,16 @@ public class Generator : MonoBehaviour {
 	private Vector2 centerPoint;
 	private Vector2 playerSpawn;
 
+	private int greenMax = 0;
+	private int redMax = 0;
 	PerlinNoise noise;
 
 	// Use this for initialization
 	void Start () {
+		//greenMax = waterLevel + (100 - waterLevel) / 2;
+		//redMax = greenMax + (100 - greenMax) / 2;
+		greenMax = 60;
+		redMax = 72;
 		tileGrid = new GameObject[maxX,maxY];
 		noise = new PerlinNoise (Random.Range(1000000, 10000000));
 		Regenerate();
@@ -36,11 +44,23 @@ public class Generator : MonoBehaviour {
 			 
 			for (int j = 0; j < maxY; j++) {
 				int zz = noise.getNoise (i, j, 100);
-				if (zz >= waterLevel) {
-					GameObject block = (GameObject) Instantiate (greenTile, new Vector2(i + width, j + height), greenTile.transform.rotation);
+				//Debug.Log (zz);
+				if (zz >= waterLevel && zz < greenMax) {
+					GameObject block = (GameObject)Instantiate (greenTile, new Vector2 (i + width, j + height), greenTile.transform.rotation);
 					tileGrid [i, j] = block;
 					greens.Add (block);
-				} else {
+				}
+				else if (zz >= greenMax && zz < redMax){
+					GameObject block = (GameObject)Instantiate (redTile, new Vector2 (i + width, j + height), redTile.transform.rotation);
+					tileGrid [i, j] = block;
+				}
+
+				else if(zz >= redMax) {
+					GameObject block = (GameObject)Instantiate (yellowTile, new Vector2 (i + width, j + height), yellowTile.transform.rotation);
+					tileGrid [i, j] = block;
+				}
+
+				else {
 					GameObject block = (GameObject) Instantiate (blueTile, new Vector2(i + width, j + height), blueTile.transform.rotation);
 					tileGrid [i, j] = block;
 					blues.Add (block);
