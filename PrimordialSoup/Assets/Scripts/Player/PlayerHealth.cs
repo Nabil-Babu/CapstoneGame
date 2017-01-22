@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth = 100;
 	public int currentHealth;
-	//public Slider healthSlider;
+	public Slider healthSlider;
 	//public Image damageImage;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color (1f, 0f, 0f, 0.1f);
@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	void Awake() {
 		playerMovement = GetComponent <PlayerMovement> ();
+		healthSlider = GameObject.Find ("HealthSlider").GetComponent<Slider>();
 		currentHealth = startingHealth;
 	}
 
@@ -36,10 +37,10 @@ public class PlayerHealth : MonoBehaviour {
 	public void TakeDamage (int amount){
 		damaged = true;
 		currentHealth -= amount;
-		//healthSlider.value = currentHealth;
+		healthSlider.value = currentHealth;
 
 		if (currentHealth <= 0 && !isDead) {
-			Death ();
+			//Death ();
 		}
 	}
 

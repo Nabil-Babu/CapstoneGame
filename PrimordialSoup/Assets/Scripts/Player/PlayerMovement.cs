@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour {
 	public float rotVSpeed = 2.0F;
 
 	PlayerScore playerScore;
+	PlayerHealth playerHealth;
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		playerScore = GetComponent<PlayerScore> ();
+		playerHealth = GetComponent<PlayerHealth> ();
 	}
 
 	void FixedUpdate () {
@@ -34,7 +36,11 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		
+
+		if (other.gameObject.CompareTag ("enemy")) {
+			playerHealth.TakeDamage (1);
+		}
+
 		if (other.gameObject.CompareTag ("item")) {
 			Rotator heart = other.GetComponent<Rotator>();
 			heart.Death ();

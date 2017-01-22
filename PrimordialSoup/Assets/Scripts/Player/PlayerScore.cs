@@ -24,21 +24,21 @@ public class PlayerScore : MonoBehaviour {
 
 	public void green() {
 		greenCol++;
-		guiGreens.text = ("Greens: " + greenCol.ToString ());
+		guiGreens.text = (greenCol.ToString ());
 	}
 
 	public void red() {
 		redCol++;
-		guiReds.text = ("Reds: " + redCol.ToString ());
+		guiReds.text = (redCol.ToString ());
 	}
 
 	public void yellow() {
 		yellowCol++;
-		guiYellows.text = ("Yellows: " + yellowCol.ToString ());
+		guiYellows.text = (yellowCol.ToString ());
 	}
 
 	public void heart() {
 		hearts++;
-		guiHearts.text = ("Hearts: " + hearts.ToString ());
+		guiHearts.text = (hearts.ToString ());
 	}
 }
