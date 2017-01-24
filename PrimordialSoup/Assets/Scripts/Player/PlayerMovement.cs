@@ -9,12 +9,10 @@ public class PlayerMovement : MonoBehaviour {
 	public float rotHSpeed = 2.0F;
 	public float rotVSpeed = 2.0F;
 
-	PlayerScore playerScore;
 	PlayerHealth playerHealth;
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
-		playerScore = GetComponent<PlayerScore> ();
 		playerHealth = GetComponent<PlayerHealth> ();
 	}
 
@@ -44,7 +42,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (other.gameObject.CompareTag ("item")) {
 			Rotator heart = other.GetComponent<Rotator>();
 			heart.Death ();
-			playerScore.heart ();
 		}
 
 	}

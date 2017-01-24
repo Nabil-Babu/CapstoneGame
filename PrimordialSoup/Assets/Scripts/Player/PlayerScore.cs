@@ -13,6 +13,7 @@ public class PlayerScore : MonoBehaviour {
 	public Text guiReds;
 	public Text guiYellows;
 
+
 	// Use this for initialization
 	void Start () {
 		guiHearts = GameObject.Find ("Hearts").GetComponent<Text> ();

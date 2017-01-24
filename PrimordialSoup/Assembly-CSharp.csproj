@@ -47,14 +47,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\ClickToLoadAsync.cs" />
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\GameManagers\GameOverManager.cs" />
+     <Compile Include="Assets\Scripts\GameManagers\GamePauseManager.cs" />
+     <Compile Include="Assets\Scripts\GameManagers\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\GameManagers\QuestLogManager.cs" />
      <Compile Include="Assets\Scripts\Generator.cs" />
      <Compile Include="Assets\Scripts\PerlinNoise.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerScore.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />

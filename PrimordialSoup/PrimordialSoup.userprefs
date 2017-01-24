@@ -9,12 +9,15 @@
       <File FileName="Assets\Scripts\ShotMover.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Generator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TileCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerScore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerHealth.cs" Line="43" Column="6" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="41" Column="30" />
+      <File FileName="Assets\Scripts\Player\PlayerScore.cs" Line="15" Column="2" />
       <File FileName="Assets\Scripts\Rotator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerShooting.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameOverManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadOnClick.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\ClickToLoadAsync.cs" Line="26" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
