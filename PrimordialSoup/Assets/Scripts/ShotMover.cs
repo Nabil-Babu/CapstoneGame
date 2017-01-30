@@ -4,7 +4,6 @@ using System.Collections;
 public class ShotMover : MonoBehaviour {
 
 	public float speed;
-	public int shotDamage = 10;
 
 	float timer = 1;
 
@@ -18,21 +17,25 @@ public class ShotMover : MonoBehaviour {
 		rb2d.velocity = transform.up * speed;
 	}
 
+	void OnTriggerEnter2D (Collider2D other) {
+		if (gameObject.tag == "Enemy" && other.gameObject.tag == "Player") {
+			Death ();
+		}
+
+		if (gameObject.tag == "Player" && other.gameObject.tag == "Enemy") {
+			Death ();
+		}
+	}
+
 	void Update () {
 		timer -= Time.deltaTime;
 		if (timer <= 0) {
-			Death (); 
-		}
-	}
-
-	void Death() {
-		Destroy (gameObject); 
-	}
-
-	void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.tag == "enemy") {
 			Death ();
 		}
+	}
+
+	void Death () {
+		Destroy (gameObject);
 	}
 }
 	

@@ -18,14 +18,14 @@ public class TileCollision : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Player") {
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.gameObject.tag == "melee") {
 			health--;
 			if (health <= 0) {
 				Death ();
 			}
-		} 
-
+		}
 	}
 
 	void Death() {

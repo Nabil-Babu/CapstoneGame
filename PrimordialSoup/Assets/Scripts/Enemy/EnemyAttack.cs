@@ -14,15 +14,14 @@ public class EnemyAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		//player = GameObject.FindGameObjectWithTag ("Player");
-		//playerHealth = player.GetComponent <PlayerHealth> ();
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject == player) {
 			playerInRange = true;
-
 		}
 	}
 
@@ -38,12 +37,12 @@ public class EnemyAttack : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0) {
-			Attack ();
+			Melee ();
 		}
 			
 	}
 
-	void Attack () {
+	void Melee () {
 		timer = 0f;
 
 		if (playerHealth.currentHealth > 0) {

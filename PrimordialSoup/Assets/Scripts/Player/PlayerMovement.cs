@@ -35,8 +35,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 
-		if (other.gameObject.CompareTag ("enemy")) {
-			playerHealth.TakeDamage (1);
+		if (other.gameObject.CompareTag ("EnemyShot")) {
+			playerHealth.TakeDamage (5);
 		}
 
 		if (other.gameObject.CompareTag ("item")) {

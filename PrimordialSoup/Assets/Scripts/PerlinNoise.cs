@@ -57,4 +57,8 @@ public class PerlinNoise{
 	private float lerp(float l, float r, float t) {
 		return l * (1 - t) + r * t; 
 	}
+
+	public int getSeed(){
+		return seed;
+	}
 }
