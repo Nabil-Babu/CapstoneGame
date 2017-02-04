@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{DBD5F224-5363-F0F6-7D38-CD69E4608252}") = "PrimordialSoup", "Assembly-CSharp.csproj", "{270CEE67-6963-FD66-3C7C-9935F68076D2}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimordialSoup", "Assembly-CSharp.csproj", "{270CEE67-6963-FD66-3C7C-9935F68076D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

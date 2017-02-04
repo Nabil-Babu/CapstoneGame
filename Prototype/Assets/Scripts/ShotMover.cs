@@ -18,7 +18,11 @@ public class ShotMover : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.tag == "Enemy") {
+		if (gameObject.tag == "Enemy" && other.gameObject.tag == "Player") {
+			Death ();
+		}
+
+		if (gameObject.tag == "Player" && other.gameObject.tag == "Enemy") {
 			Death ();
 		}
 	}
