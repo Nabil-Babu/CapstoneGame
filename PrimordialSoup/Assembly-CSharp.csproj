@@ -46,20 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BGmusicDM.cs" />
+     <Compile Include="Assets\Scripts\BGmusic.cs" />
      <Compile Include="Assets\Scripts\CameraBoundaries.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\ClickToLoadAsync.cs" />
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyChaseDM.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyChase.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyGuard.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyHealthDM.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyShootDM.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyShoot.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStationary.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyWanderDM.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyWander.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GameManagers\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\GameManagers\GamePauseManager.cs" />
@@ -69,20 +69,20 @@
      <Compile Include="Assets\Scripts\PerlinNoise.cs" />
      <Compile Include="Assets\Scripts\Player\DrillDeath.cs" />
      <Compile Include="Assets\Scripts\Player\MapBoundaries.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerHealthDM.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMelee.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovementDM.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerQuestsDM.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerQuests.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerScore.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerShootingDM.cs" />
-     <Compile Include="Assets\Scripts\PlayerModelDM.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
+     <Compile Include="Assets\Scripts\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\QuestDropper.cs" />
      <Compile Include="Assets\Scripts\QuestItem.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
-     <Compile Include="Assets\Scripts\ShotMoverDM.cs" />
+     <Compile Include="Assets\Scripts\ShotMover.cs" />
      <Compile Include="Assets\Scripts\TileChanger.cs" />
-     <Compile Include="Assets\Scripts\TileCollisionDM.cs" />
+     <Compile Include="Assets\Scripts\TileCollision.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
