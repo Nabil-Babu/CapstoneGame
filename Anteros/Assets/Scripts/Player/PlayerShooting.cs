@@ -12,7 +12,7 @@ public class PlayerShooting : MonoBehaviour {
 	public AudioClip shootSound;
 
 	private AudioSource source;
-	private float volLowRange = .5f;
+	private float volLowRange = 0.5f;
 	private float volHighRange = 1.0f;
 	private bool isShoot = true;
 

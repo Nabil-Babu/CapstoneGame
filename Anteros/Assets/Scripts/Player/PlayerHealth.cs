@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour {
 	public Image damageImage;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color (1f, 0f, 0f, 0.1f);
-	public int shotDamage = 10;
 
 	private bool isDead;
 
@@ -44,12 +43,12 @@ public class PlayerHealth : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "EnemyShot") {
-			TakeDamage (other.GetComponent<ShotMover>().shotDmg);
+			TakeDamage (other.GetComponent<ShotMover>().spawnOrigin.GetComponent<EnemyShoot>().shotDamage);
 		}
 	}
 
 	public void Heal (int amount) {
-		if (currentHealth != 0) {
+		if (currentHealth != 0 && currentHealth < 100) {
 			currentHealth += amount;
 			healthSlider.value = currentHealth;
 		}

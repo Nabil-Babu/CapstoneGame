@@ -13,6 +13,7 @@ public class EnemyShoot : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate = 2f;
 	public float nextFire = 1f;
+	public int shotDamage = 10;
 
 	public AudioClip shootSound;
 
@@ -55,6 +56,7 @@ public class EnemyShoot : MonoBehaviour {
 		float vol = Random.Range (volLowRange, volHighRange);
 		source.PlayOneShot(shootSound,vol);
 		nextFire = Time.time + fireRate;
+		shot.GetComponent<ShotMover> ().spawnOrigin = gameObject;
 		Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 	}
 }

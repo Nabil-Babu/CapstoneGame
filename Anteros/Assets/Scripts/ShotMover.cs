@@ -4,7 +4,7 @@ using System.Collections;
 public class ShotMover : MonoBehaviour {
 
 	public float speed;
-	public int shotDmg = 10;
+	public GameObject spawnOrigin;
 
 	float timer = 1;
 
@@ -32,7 +32,7 @@ public class ShotMover : MonoBehaviour {
 			}
 		}
 
-		if (other.gameObject.tag == "green" || other.gameObject.tag == "yellow" || other.gameObject.tag == "red") {
+		if (other.gameObject.tag == "lowTier" || other.gameObject.tag == "midTier" || other.gameObject.tag == "highTier") {
 			Death ();
 		}
 
